@@ -2,7 +2,7 @@
 
 ## Summary
 
-AWS Lambda can do heavy lifting things, which othersise needed high memory infrastructure. AWS Lambda has limitations with respect to the upload size. One solution to tackle this is create a requirements.txt that can download the necessary dependencies.
+AWS Lambda can do heavy lifting things, which otherwise needed high memory infrastructure. AWS Lambda has limitations with respect to the upload size. One solution to tackle this is create a requirements.txt that can download the necessary dependencies.
 
 AWS Lambda works as a container. So I deployed container in Lambda. What is the benefit?..One docker image can have pytorch models and another can have tensorflow or keras. One can have python2.x dependencies another can have Python3.x
 
