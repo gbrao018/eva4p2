@@ -6,7 +6,7 @@ AWS Lambda can do heavy lifting things, which othersise needed high memory infra
 
 AWS Lambda works as a container. So I deployed container in Lambda. What is the benefit?..One docker image can have pytorch models and another can have tensorflow or keras. One can have python2.x dependencies another can have Python3.x
 
-In this example, I choose the opensource serverless framework , created docker image and deployed in AWS lambda. Serverless framework creates deployment stack using serverless.yml. My serverless.yml uses S3, Amazon API Gateway, AWS Cloudwatch for logs, AWS Lambda and ofcource AWS IAM services.
+In this example, I choose the opensource serverless framework , created docker image and deployed in AWS lambda. Serverless framework creates deployment stack using serverless.yml. My serverless.yml stack includes S3, Amazon API Gateway, AWS Cloudwatch for logs, AWS Lambda and ofcource AWS IAM services. handler.py is the entry point that executes AWS Lamda function with Pytoch models resnet34 and Mobilenetv2. 
 
 One bad experience is upload time it took, due to limited internet bandwidth.
 
