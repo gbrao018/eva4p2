@@ -7,8 +7,7 @@ device = torch.device("cuda") if torch.cuda.is_available() else torch.device("cp
 
 root_dir = "/content/Session2Dataset-copy"
 # replace with actual mean and std values
-normalize = transforms.Normalize(mean=[149.17579724, 143.51813416, 136.34473418],
-                                        std=[10.918, 10.54722837, 9.7497292])
+normalize = transforms.Normalize(mean=[0.5271, 0.5788, 0.6095], std=[0.1707, 0.1650, 0.1804])
 
 tr = transforms.Compose([
     transforms.RandomHorizontalFlip(),
@@ -25,7 +24,3 @@ train_set = WingsFolderDataset("/content/Session2Dataset-train", transform = tr)
 train_loader = torch.utils.data.DataLoader(train_set, batch_size=64,
                                           shuffle=True, num_workers=1,pin_memory=False)
 
-test_transform = transforms.Compose([transforms.ToTensor(),normalize])
-test_set = WingsFolderDataset("/content/Session2Dataset-test", transform = tr)('/content/Dataset_224/', size = 100000, test=True, transform = test_transform)
-
-test_loader = torch.utils.data.DataLoader(test_set, batch_size=64, shuffle=False, num_workers=1)
