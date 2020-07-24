@@ -1,6 +1,10 @@
 import torch
 from torch.utils.data import DataLoader, Dataset
 
+#mean= tensor([0.5271, 0.5788, 0.6095])
+#std= tensor([0.1707, 0.1650, 0.1804])
+#(tensor([0.5271, 0.5788, 0.6095]), tensor([0.1707, 0.1650, 0.1804]))
+
 def mean_std(dataset):
   dataloader = torch.utils.data.DataLoader(dataset, batch_size=1,
                                           shuffle=True, num_workers=1)
